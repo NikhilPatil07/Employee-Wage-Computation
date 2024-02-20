@@ -11,6 +11,7 @@ public class EmployeeWageComp {
 		int attendance1;
 		int employee_type = 0;
 		int dailyWage1 = 0;
+		int total_wage = 0;
 		final int WAGE_PER_HR = 20;
 		final int FULL_TIME_HR = 8;
 		final int PART_TIME_HR = 4;
@@ -48,6 +49,7 @@ public class EmployeeWageComp {
 							default:
 								System.out.println(" Not a Employee ");
 						}
+						total_wage += dailyWage1;
 						System.out.println(" Employee Wage = " + dailyWage1);
 				break;
 				
@@ -55,6 +57,7 @@ public class EmployeeWageComp {
 					System.out.println(" Invalid Number ");
 	
 			}
+			System.out.println("...............");
 		}
 	}
 }
