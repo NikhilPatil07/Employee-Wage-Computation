@@ -2,11 +2,10 @@ package com.infogalaxy.employeewagecomputation;
 
 import java.util.Random;
 
-public class EmployeeWageComp {
+public class EmployeeWageComp 
+{
 
-	public static void main(String[] args) {
-
-		
+	
 	
 		int attendance1;
 		int employee_type = 0;
@@ -19,13 +18,16 @@ public class EmployeeWageComp {
 		final int PART_TIME_HR = 4;
 		final int WORKING_DAYS = 20;
 		
-		System.out.println(" Welcome to Employee Wage Computation ");
+		public void employeeWageCalc()
+		{
+			System.out.println(" Welcome to Employee Wage Computation ");
 		
-		while(total_working_hr <= 100 && total_working_days <= 20 ) 
+			while(total_working_hr <= 100 && total_working_days <= 20 ) 
 		{
 		 System.out.println(" Day = "+total_working_days);	
 		 Random random = new Random();
 		 attendance1 = random.nextInt(9) % 2;
+		 
 		
 			switch(attendance1)
 			{
@@ -66,5 +68,10 @@ public class EmployeeWageComp {
 			total_working_days++;
 		}
 		System.out.println(" Total Monthly Wage = "+total_wage);
-	}
+		}
+		public static void main(String[] args)
+		{
+			EmployeeWageComp employeeWageComp = new EmployeeWageComp();
+			employeeWageComp.employeeWageCalc();
+		}
 }
